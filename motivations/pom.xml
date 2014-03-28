@@ -1,5 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.pp.mtvns</groupId>
@@ -12,6 +12,9 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <spring.version>3.2.2.RELEASE</spring.version>
+    <servlet.api.version>2.5</servlet.api.version>
+    <javax.inject.version>1</javax.inject.version>
   </properties>
 
   <dependencies>
@@ -21,5 +24,45 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+
+    <dependency>
+    	<groupId>org.springframework</groupId>
+	<artifactId>spring-core</artifactId>
+	<version>${spring.version}</version>
+    </dependency>
+
+
+    <dependency>
+    	<groupId>org.springframework.security</groupId>
+	<artifactId>spring-security-web</artifactId>
+	<version>${spring.version}</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.springframework.security</groupId>
+	<artifactId>spring-security-config</artifactId>
+	<version>${spring.version}</version>
+    </dependency>
+
+    <dependency>
+    	<groupId>javax.servlet</groupId>
+	<artifactId>servlet-api</artifactId>
+	<version>${servlet.api.version}</version>
+    </dependency>
+
+    
+    <dependency>
+    	<groupId>javax.inject</groupId>
+	<artifactId>javax.inject</artifactId>
+	<version>${javax.inject.version}</version>
+    </dependency>
+
+
+
   </dependencies>
+
+  <modules>
+    <module>motivations-test-project</module>
+    <module>motivations-test-secured-webapp</module>
+    <module>motivations-spitter</module>
+  </modules>
 </project>
